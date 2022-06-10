@@ -1,0 +1,30 @@
+﻿<Window x:Class="Gestion_de_Campeonatos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestion_de_Campeonatos"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="MainWindow" Height="550" Width="1051" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid Background="#D32F2F" Height="70" VerticalAlignment="Top">
+            <Label Content="CHAMPIONSHIP MAKER" VerticalAlignment="Center" FontSize="30" Foreground="White" HorizontalAlignment="Center"/>
+            <Image Source="C:\Users\Dell\Desktop\Dani\PROGRA 3\Gestion_de_Campeonatos\Gestion_de_Campeonatos\Images\COPAPISTON.png" HorizontalAlignment="Left"/>
+            <materialDesign:PackIcon x:Name="btnClose" Kind="Close" Foreground="#FFF" HorizontalAlignment="Right" Margin="10" Height="30" Width="30" VerticalAlignment="Center" MouseLeftButtonUp="btnClose_MouseLeftButtonUp" Cursor="Hand"/>
+        </Grid>
+        <Button x:Name="btnLug" Content="LUGARES" Background="#455A64" BorderBrush="{x:Null}" FontSize="25" Height="50" Width="150" Margin="10,102,891,398" Click="btnLug_Click" Cursor="Hand"/>
+        <Button x:Name="btnCamp" Content="CAMPEONATOS" Background="#455A64" BorderBrush="{x:Null}" FontSize="25" Height="50" Width="220" Margin="10,157,821,343" Click="btnCamp_Click" Cursor="Hand"/>
+        <Button x:Name="btnEqui" Content="Equipos" Background="#455A64" BorderBrush="{x:Null}" FontSize="25" Height="50" Width="150" Margin="10,212,891,288" Click="btnEqui_Click" Cursor="Hand"/>
+        <Button x:Name="btnDep" Content="Deportes" Background="#455A64" BorderBrush="{x:Null}" FontSize="25" Height="50" Width="150" Margin="10,267,891,233" Click="btnDep_Click" Cursor="Hand"/>
+        <Button x:Name="btnHome" Content="Menu" Background="#455A64" BorderBrush="{x:Null}" FontSize="25" Height="50" Width="150" Margin="10,322,891,178" Click="btnHome_Click"  Cursor="Hand"/>
+        <Grid x:Name="gtViews" Margin="248,70,0,0" Width="800"/>
+    </Grid>
+</Window>

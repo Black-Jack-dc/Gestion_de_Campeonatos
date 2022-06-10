@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Gestion_de_Campeonatos.Lugares.LugaresView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Gestion_de_Campeonatos.Lugares"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <TextBox x:Name="txtName" FontSize="20" Margin="10,10,538,383" materialDesign:HintAssist.Hint="Nombre del lugar" materialDesign:HintAssist.IsFloating="True"/>
+        <TextBox x:Name="txtUB" FontSize="20" Margin="10,84,538,309" materialDesign:HintAssist.Hint="Ubicacion del lugar" materialDesign:HintAssist.IsFloating="True"/>
+        <TextBox x:Name="txtSize" FontSize="20" Margin="10,168,538,225" materialDesign:HintAssist.Hint="Tamaño del lugar" materialDesign:HintAssist.IsFloating="True"/>
+        <DataGrid x:Name="gtvData" Background="AntiqueWhite" Margin="476,38,50,86"/>
+        <Button x:Name="btnAdd" Content="agregar" Margin="10,277,704,141" Background="#455A64" BorderBrush="{x:Null}"/>
+        <Button x:Name="btnDelete" Content="eliminar" Margin="10,314,704,104" Background="#455A64" BorderBrush="{x:Null}"/>
+    </Grid>
+</UserControl>
