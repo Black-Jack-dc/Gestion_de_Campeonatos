@@ -10,8 +10,11 @@ namespace Gestion_de_Campeonatos
     {
         public string NomCampeonato { get; set; }
 
-        public List<Equipo> Equipo { get; set; }
-        public List<Deporte> Deportes { get; set; }
-        public List<Lugar> Lugares { get; set; }
+        public List<Equipo> ListEquipo { get; set; }
+        public List<Deporte> ListDeporte { get; set; }
+        public List<Lugar> ListLugare { get; set; }
+
+
+
     }
 }

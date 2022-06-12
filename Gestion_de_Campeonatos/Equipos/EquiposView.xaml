@@ -33,7 +33,7 @@
                 </StackPanel>
             </ListViewItem>
         </ListView>
-        <DataGrid x:Name="dgtEquipos" Margin="10,121,238,10"  IsReadOnly="True" CanUserAddRows="False"/>
+        <DataGrid x:Name="dgtEquipos" Margin="10,121,238,10"  IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgtEquipos_SelectionChanged"/>
         <Button x:Name="btnAdd" Content="Agregar equipo" Margin="615,20,39,398" Background="#455A64" BorderBrush="{x:Null}" Click="btnAdd_Click"/>
         <Button x:Name="btnDelete" Content="Eliminar equipo" Margin="615,57,33,361" Background="#455A64" BorderBrush="{x:Null}" Click="btnDelete_Click"/>
         <Button x:Name="btnUpdate" Content="Actualizar equipo" Margin="615,94,33,324" Background="#455A64" BorderBrush="{x:Null}" Click="btnUpdate_Click"/>

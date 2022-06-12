@@ -30,7 +30,7 @@ namespace Gestion_de_Campeonatos
         #region Consultas Equipos
         public DataTable Select_Equipos()
         {
-            string query = @"select nombreEquipo as 'Nombre del equipo:', cantidadEquipos as 'Cantidad de jugadores'
+            string query = @"select id, nombreEquipo as 'Nombre del equipo:', cantidadEquipos as 'Cantidad de jugadores'
                              from Equipos
                              where status = 1";
 
@@ -48,8 +48,8 @@ namespace Gestion_de_Campeonatos
         }
         public int Insert_Equipos(Equipo e)
         {
-            string query = @"  insert into Equipos(nombreEquipo, cantidadEquipos)
-                               values(@nombreEquipo, @cantidadEquipos)";
+            string query = @"insert into Equipos(nombreEquipo, cantidadEquipos)
+                             values(@nombreEquipo, @cantidadEquipos)";
             SqlCommand command = CreateBasicCommand(query);
 
             command.Parameters.AddWithValue("@nombreEquipo", e.NomEquipos);
@@ -65,7 +65,63 @@ namespace Gestion_de_Campeonatos
                 throw ex;
             }
         }
+
+        public int Update_equipos(Equipo e)
+        {
+            string query = @"update Equipos set nombreEquipo = @nombreEquipo, cantidadEquipos = @cantidadEquipos
+                             where id = @id";
+            SqlCommand command = CreateBasicCommand(query);
+
+            command.Parameters.AddWithValue("@id", e.id);
+            command.Parameters.AddWithValue("@nombreEquipo", e.NomEquipos);
+            command.Parameters.AddWithValue("@cantidadEquipos", e.CantParticipantes);
+
+            try
+            {
+                return ExecueteBasicCommand(command);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public int Delete_Equipos (Equipo e)
+        {
+            string query = @"update Equipos set status = 0
+                             where id = @id";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", e.id);
+
+            try
+            {
+                return ExecueteBasicCommand(command);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
         #endregion
+
+        #region Consulas Deportes
+
+
+
+
+
+
+
+
+
+
+
+
+        #endregion
+
+        #region Comandos
         public DataTable ExecuteSelectCommand(SqlCommand command)
         {
             try
@@ -102,5 +158,6 @@ namespace Gestion_de_Campeonatos
                 command.Connection.Close();
             }
         }
+        #endregion
     }
 }
